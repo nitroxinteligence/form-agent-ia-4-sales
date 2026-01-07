@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-import { supabaseServer } from "@/lib/supabase/server";
+import { getSupabaseServerClient } from "@/lib/supabase/server";
 
 function isPlainObject(value: unknown): value is Record<string, unknown> {
   return typeof value === "object" && value !== null && !Array.isArray(value);
@@ -8,6 +8,18 @@ function isPlainObject(value: unknown): value is Record<string, unknown> {
 
 export async function POST(request: Request) {
   try {
+    const supabaseServer = getSupabaseServerClient();
+
+    if (!supabaseServer) {
+      return NextResponse.json(
+        {
+          error:
+            "Supabase server env vars missing. Set SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY.",
+        },
+        { status: 500 }
+      );
+    }
+
     const body = await request.json();
 
     if (!isPlainObject(body)) {
