@@ -420,8 +420,8 @@ export function FormWizard() {
     if (storedStepsTimestamp) {
       try {
         setStepTimestamps(JSON.parse(storedStepsTimestamp));
-      } catch {
-        console.error("Failed to parse step timestamps", error);
+      } catch (_error) {
+        console.error("Failed to parse step timestamps", _error);
       }
     }
   }, [form]);
@@ -485,7 +485,7 @@ export function FormWizard() {
         saveTimeout.current = setTimeout(() => {
           setSavingStatus("idle");
         }, 2000);
-      } catch {
+      } catch (_error) {
         setSavingStatus("error");
         saveTimeout.current = setTimeout(() => {
           setSavingStatus("idle");
