@@ -405,7 +405,7 @@ export function FormWizard() {
       try {
         const parsed = JSON.parse(storedData) as FormValues;
         form.reset({ ...defaultValues, ...parsed });
-      } catch (error) {
+      } catch {
         console.error("Failed to parse stored form data", error);
       }
     }
