@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <linearGradient id="vGradient" x1="120" y1="80" x2="392" y2="440" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1d4ed8" />
+      <stop offset="1" stop-color="#0ea5e9" />
+    </linearGradient>
+  </defs>
+  <text
+    x="50%"
+    y="50%"
+    text-anchor="middle"
+    dominant-baseline="middle"
+    font-family="Inter, system-ui, sans-serif"
+    font-weight="700"
+    font-size="480"
+    fill="url(#vGradient)"
+  >V</text>
+</svg>

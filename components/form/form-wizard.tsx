@@ -420,7 +420,7 @@ export function FormWizard() {
     if (storedStepsTimestamp) {
       try {
         setStepTimestamps(JSON.parse(storedStepsTimestamp));
-      } catch (error) {
+      } catch {
         console.error("Failed to parse step timestamps", error);
       }
     }

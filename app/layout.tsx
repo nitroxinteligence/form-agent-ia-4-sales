@@ -15,7 +15,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "IA Four Sales - Formulário",
+  title: "IA Four Sales - Criação de Agentes de IA",
   description: "Formulário de briefing para criação de Agente de IA",
 };
 
