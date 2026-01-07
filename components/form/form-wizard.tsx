@@ -485,7 +485,7 @@ export function FormWizard() {
         saveTimeout.current = setTimeout(() => {
           setSavingStatus("idle");
         }, 2000);
-      } catch (error) {
+      } catch {
         setSavingStatus("error");
         saveTimeout.current = setTimeout(() => {
           setSavingStatus("idle");
